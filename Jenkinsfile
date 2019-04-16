@@ -14,8 +14,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'export http_proxy = http://gate.zrh.swissre.com:8080/'
-                sh 'export https_proxy = 'http://gate.zrh.swissre.com:8080/'
+                sh "export http_proxy = 'http://gate.zrh.swissre.com:8080/'"
+                sh "export https_proxy = 'http://gate.zrh.swissre.com:8080/'"
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
