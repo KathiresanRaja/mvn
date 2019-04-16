@@ -1,4 +1,10 @@
 pipeline {
+    environment {
+        http_proxy = 'http://gate.zrh.swissre.com:8080/'
+        https_proxy = 'http://gate.zrh.swissre.com:8080/'
+        HTTP_PROXY = 'http://gate.zrh.swissre.com:8080/'
+        HTTPS_PROXY = 'http://gate.zrh.swissre.com:8080/'
+    }
     agent {
         docker {
             image 'maven:3-alpine' 
